@@ -51,6 +51,18 @@
             <artifactId>org-openide-modules</artifactId>
             <version>${netbeans.version}</version>
         </dependency>
+        
+        <dependency>
+            <groupId>com.tbw</groupId>
+            <artifactId>TreeView</artifactId>
+            <version>1.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.tbw</groupId>
+            <artifactId>DataView</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
     <build>

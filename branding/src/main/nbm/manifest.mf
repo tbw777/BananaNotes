@@ -1,3 +1,4 @@
 Manifest-Version: 1.0
+OpenIDE-Module-Layer: com/tbw/banananotes/branding/layer.xml
 OpenIDE-Module-Localizing-Bundle: com/tbw/banananotes/branding/Bundle.properties
 AutoUpdate-Essential-Module: true

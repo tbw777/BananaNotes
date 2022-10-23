@@ -23,3 +23,5 @@
 hs_err_pid*
 /BananaNotes/branding/target/
 /application/target/
+/DataView/target/
+/TreeView/target/
