@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<windowmanager version="2.1">
+    <main-window>
+        <joined-properties centered-horizontally="true" centered-vertically="true"
+                           relative-width="0.5" relative-height="0.5" />
+        <separated-properties centered-horizontally="true" relative-y="0.1"
+                              relative-width="0.8" relative-height="0.08" />
+    </main-window>
+    <editor-area state="joined" frame-state="0">
+        <constraints>
+            <path orientation="horizontal" number="1" weight="0.75" />
+            <path orientation="vertical" number="0" weight="0.75" />
+            <path orientation="horizontal" number="0" weight="0.75" />
+        </constraints>
+        <bounds x="0" y="0" width="0" height="0" />
+    </editor-area>
+    <screen width="1920" height="1080"/>
+    <toolbar configuration="Standard" preferred-icon-size="24"/>
+    <tc-list>
+        <tc-id id="properties"/>
+        <tc-id id="output"/>
+    </tc-list>
+</windowmanager>
