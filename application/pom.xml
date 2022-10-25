@@ -54,7 +54,7 @@
         
         <dependency>
             <groupId>com.tbw</groupId>
-            <artifactId>TreeView</artifactId>
+            <artifactId>NotesTreeView</artifactId>
             <version>1.0</version>
         </dependency>
         

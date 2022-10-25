@@ -63,8 +63,8 @@
     <modules>
         <module>branding</module>
         <module>application</module>
-        <module>TreeView</module>
         <module>DataView</module>
+        <module>NotesTreeView</module>
     </modules>
 
     <properties>
