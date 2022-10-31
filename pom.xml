@@ -65,6 +65,7 @@
         <module>application</module>
         <module>DataView</module>
         <module>NotesTreeView</module>
+        <module>Project</module>
     </modules>
 
     <properties>

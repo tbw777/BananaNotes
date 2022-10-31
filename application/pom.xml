@@ -53,6 +53,13 @@
         </dependency>
         
         <dependency>
+            <groupId>org.netbeans.modules</groupId>
+            <artifactId>org-netbeans-modules-projectui</artifactId>
+            <version>${netbeans.version}</version>
+        </dependency>
+       
+        
+        <dependency>
             <groupId>com.tbw</groupId>
             <artifactId>NotesTreeView</artifactId>
             <version>1.0</version>
@@ -61,6 +68,12 @@
         <dependency>
             <groupId>com.tbw</groupId>
             <artifactId>DataView</artifactId>
+            <version>1.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.tbw</groupId>
+            <artifactId>Project</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>
@@ -84,6 +97,7 @@
                     <argLine>
                         --add-opens=java.base/java.net=ALL-UNNAMED
                         --add-opens=java.base/java.lang.ref=ALL-UNNAMED
+                        --add-opens=java.base/java.security=ALL-UNNAMED
                         --add-exports=java.desktop/sun.awt=ALL-UNNAMED
                     </argLine>
                 </configuration>
