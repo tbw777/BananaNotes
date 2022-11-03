@@ -4,14 +4,9 @@
  */
 package com.tbw.project;
 
-import java.beans.PropertyChangeListener;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import org.netbeans.api.annotations.common.StaticResource;
+import com.tbw.project.customizer.BananaCustomizerProvider;
 import org.netbeans.api.project.Project;
-import org.netbeans.api.project.ProjectInformation;
 import org.openide.filesystems.FileObject;
-import org.openide.util.ImageUtilities;
 import org.openide.util.Lookup;
 import org.openide.util.lookup.Lookups;
 
@@ -37,45 +32,13 @@ public class BananaProject implements Project {
     public Lookup getLookup() {
         if (lkp == null) {
             lkp = Lookups.fixed(new Object[]{ // register your features here
-                new Info()
+                this,
+                new ProjectInfo(this),
+                new BananaProjectLogicalView(this),
+                new BananaCustomizerProvider(this)
             });
         }
         return lkp;
     }
 
-    private final class Info implements ProjectInformation {
-
-        @StaticResource()
-        public static final String BANANA_ICON = "com/tbw/project/banana_icon.png";
-
-        @Override
-        public Icon getIcon() {
-            return new ImageIcon(ImageUtilities.loadImage(BANANA_ICON));
-        }
-
-        @Override
-        public String getName() {
-            return getProjectDirectory().getName();
-        }
-
-        @Override
-        public String getDisplayName() {
-            return getName();
-        }
-
-        @Override
-        public void addPropertyChangeListener(PropertyChangeListener pcl) {
-//do nothing, won't change
-        }
-
-        @Override
-        public void removePropertyChangeListener(PropertyChangeListener pcl) {
-//do nothing, won't change
-        }
-
-        @Override
-        public Project getProject() {
-            return BananaProject.this;
-        }
-    }
 }
