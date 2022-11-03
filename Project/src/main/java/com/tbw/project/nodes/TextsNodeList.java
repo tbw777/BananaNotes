@@ -22,16 +22,16 @@ import org.openide.util.Exceptions;
  */
 public class TextsNodeList implements NodeList<Node> {
 
-    private BananaProject project;
+    private final BananaProject PROJECT;
 
     public TextsNodeList(BananaProject project) {
-        this.project = project;
+        this.PROJECT = project;
     }
 
     @Override
     public List<Node> keys() {
         FileObject textsFolder
-                = project.getProjectDirectory().getFileObject("texts");
+                = PROJECT.getProjectDirectory().getFileObject("texts");
         List<Node> result = new ArrayList<>();
         if (textsFolder != null) {
             for (FileObject textsFolderFile : textsFolder.getChildren()) {
