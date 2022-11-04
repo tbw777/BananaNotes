@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-OpenIDE-Module-Localizing-Bundle: com/tbw/dataview/Bundle.properties
-OpenIDE-Module-Requires: org.openide.windows.WindowManager
-
