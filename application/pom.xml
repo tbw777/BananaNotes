@@ -58,19 +58,7 @@
             <version>${netbeans.version}</version>
         </dependency>
        
-        
-        <dependency>
-            <groupId>com.tbw</groupId>
-            <artifactId>NotesTreeView</artifactId>
-            <version>1.0</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>com.tbw</groupId>
-            <artifactId>DataView</artifactId>
-            <version>1.0</version>
-        </dependency>
-        
+       
         <dependency>
             <groupId>com.tbw</groupId>
             <artifactId>Project</artifactId>
