@@ -39,9 +39,7 @@ public class BananaProject implements Project {
                     new BananaCustomizerProvider(this));
         }
 
-        return LookupProviderSupport.createCompositeLookup(
-                lkp,
-                "Projects/com-tbw-project/Lookup");
+        return LookupProviderSupport.createCompositeLookup(lkp, "Projects/com-tbw-project/Lookup");
     }
 
 }

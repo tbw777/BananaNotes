@@ -38,7 +38,7 @@ public class ProjectInfo implements ProjectInformation {
 
     @Override
     public String getName() {
-        return bananaProject.getProjectDirectory().getName();
+        return bananaProject.getProjectDirectory().getParent().getName();
     }
 
     @Override
