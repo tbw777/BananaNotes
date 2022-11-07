@@ -30,8 +30,10 @@ public class ProjectNode extends FilterNode {
                         "Projects/com-tbw-project/Nodes"),
                 // new FilterNode.Children(node),
                 new ProxyLookup(
-                        Lookups.singleton(project),
-                        node.getLookup()));
+                        new Lookup[]{
+                            Lookups.singleton(project),
+                            node.getLookup()
+                        }));
         this.PROJECT = project;
 
 //        super(node,
@@ -69,6 +71,6 @@ public class ProjectNode extends FilterNode {
 
     @Override
     public String getDisplayName() {
-        return PROJECT.getProjectDirectory().getParent().getName();
+        return PROJECT.getProjectDirectory().getName();
     }
 }
