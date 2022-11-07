@@ -6,6 +6,7 @@ package com.tbw.project;
 
 import com.tbw.project.customizer.BananaCustomizerProvider;
 import org.netbeans.api.project.Project;
+import org.netbeans.spi.project.support.LookupProviderSupport;
 import org.openide.filesystems.FileObject;
 import org.openide.util.Lookup;
 import org.openide.util.lookup.Lookups;
@@ -31,14 +32,16 @@ public class BananaProject implements Project {
     @Override
     public Lookup getLookup() {
         if (lkp == null) {
-            lkp = Lookups.fixed(new Object[]{ // register your features here
-                this,
-                new ProjectInfo(this),
-                new BananaProjectLogicalView(this),
-                new BananaCustomizerProvider(this)
-            });
+            lkp = Lookups.fixed(// register your features here
+                    this,
+                    new ProjectInfo(this),
+                    new BananaProjectLogicalView(this),
+                    new BananaCustomizerProvider(this));
         }
-        return lkp;
+
+        return LookupProviderSupport.createCompositeLookup(
+                lkp,
+                "Projects/com-tbw-project/Lookup");
     }
 
 }
